@@ -1,0 +1,361 @@
+body {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  background-color: #FFFFFF;}
+
+@media(max-width:800px){
+  /*Ik gebruik deze divs om de pagina in stukken te delen, hier geef ik aan hoe groot deze moeten zijn en waar ze moeten staan*/
+  .div1{
+    position: absolute;
+    text-align: center;
+    height: 1000px;
+    width: 100%;
+    top: 0px;
+    padding: 0px;
+    background-color: #242424;
+  }
+
+  .div2{
+    position: absolute;
+    margin-top: 950px;
+    height: 600px;
+    width: 100%;
+    padding: 0px;
+    background-color: #FFFFFF;
+  }
+
+  .div3{
+    position: absolute;
+    margin-top: 1850px;
+    height: 300px;
+    width: 100%;
+    padding: 0px;
+    background-color: #FFFFFF;
+  }
+
+  .div4{
+    position: absolute;
+    margin-top: 2400px;
+    height: 800px;
+    width: 100%;
+    padding: 0px;
+    background-color: #242424;
+  }
+
+
+  /*Hier geef ik de stijl aan van de text en afbeeldingen die in de verschillende divs staan*/
+  .div1 img{
+    margin-top: 300px;
+    display: inline-block;
+  }
+
+  .div2 img{
+    float: right;
+    padding: 30px;
+  }
+
+  .div3 img{
+    width: 100%;
+  }
+
+  .div2H1 {
+    text-align: center;
+    padding: 0;
+    padding-top: 100px;
+    font-family: "DIN 2014";
+    font-weight: 600;
+    color: #000000;
+    font-size: 25px;
+  }
+
+  .div2P {
+    text-align: center;
+    margin-top: 0;
+    padding: 0;
+    font-family: "DIN 2014";
+    font-weight: 300;
+    color: #000000;
+    font-size: 18px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  /*het hamburger menu is gemaakt met behulp van fullpage, bron:https://alvarotrigo.com/blog/hamburger-menu-css/*/
+  /*het eerste deel is de knop die van een hamburger icoon naar een kruis verrandert wanneer hierop geklikt wordt*/
+  #menu__toggle {
+    opacity: 0;
+  }
+  #menu__toggle:checked + .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    left: 0 !important;
+  }
+  .menu__btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition-duration: .25s;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+
+  /*dit is het hamburger menu hier zit de plaatsing en de transitie "animatie" in, z-index gebruik ik om ervoor te zorgen
+  dat het menu altijd boven andere objecten staat*/
+  .menu__box {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 190px 0;
+    list-style: none;
+    background-color: #FFBB3B;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    transition-duration: .25s;
+    z-index: 1;
+  }
+
+  /*dit is de styling voor de knoppen in het hamburger menu*/
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    padding-top: 30px;
+    color: #242424;
+    font-family: 'DIN 2014';
+    font-size: 30px;
+    font-weight: 600;
+    transition-duration: .25s;
+  }
+
+  /*Hier zet ik 4 afbeeldingen horizontaal naast elkaar, zorg ik ervoor dat deze responsive zijn en voeg ik de stijl toe*/
+  .item{
+    float: center;
+    width:100%;
+    text-align:center;
+    display:block;
+    margin-right: 0px;
+    padding-top: 30px;
+    margin-bottom: 0px;
+    max-width: 100%;
+  }
+  .item h1{
+    font-family: "DIN 2014";
+    font-weight: 500;
+    color: white;
+    font-size: 30px;
+  }
+
+  .item p{
+    font-family: "DIN 2014";
+    font-weight: 200;
+    color: white;
+    font-size: 20px;
+  }
+
+/*dit is de styling en de plaatsing van de footer*/
+  .footer{
+    background-color: #242424;
+  }
+
+  .footerstyle {
+    padding: 30px;
+  }
+
+  .footerTop{
+    padding: 30px;
+  }
+
+}
+
+/*hier geef ik aan wat er moet gebeuren als ik over een menu knop hover */
+.menu__item:hover {
+  background-color: #242424;
+  color: #FFBB3B;
+}
+
+
+@media(min-width:800px){
+  /*Ik gebruik deze divs om de pagina in stukken te delen, hier geef ik aan hoe groot deze moeten zijn*/
+  .div1{
+
+    height: 1000px;
+    width: 100%;
+    text-align: center;
+    padding: 0px;
+    top: 0;
+    background-color: #242424;
+  }
+
+  .div2{
+    position: absolute;
+    margin-top: 0px;
+    height: 300px;
+    width: 100%;
+    padding: 0px;
+    background-color: #FFFFFF;
+  }
+
+  .div3{
+    position: absolute;
+    margin-top: 850px;
+    width: 100%;
+    padding: 0px;
+    background-color: #FFFFFF;
+  }
+
+  .div4{
+    position: absolute;
+    margin-top: 2400px;
+    height: 200px;
+    width: 100%;
+    padding: 0px;
+    background-color: #242424;
+  }
+
+  .div1 img{
+    margin-top: 300px;
+    display: inline-block;
+  }
+
+  .div2 img{
+    float: right;
+  padding: 30px;
+  }
+
+  .div3 img{
+    width: 100%;
+  }
+
+  .div2H1 {
+    text-align: center;
+    padding: 0;
+    padding-top: 100px;
+    font-family: "DIN 2014";
+    font-weight: 600;
+    color: #000000;
+    font-size: 40px;
+  }
+
+  .div2P {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 60px;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 0;
+    font-family: "DIN 2014";
+    font-weight: 300;
+    color: #000000;
+    font-size: 30px;
+  }
+
+/* hier transformeer ik het hamburgermenu naar een horizontale navbar*/
+  .menu__box {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 45px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #FFBB3B;
+    z-index: 2;
+  }
+
+  .menu__item {
+    display: flex;
+    padding: 12px 24px;
+    color: black;
+    font-family: 'DIN 2014';
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+/*dit is de styling en de plaatsing van de footer*/
+  .footer{
+    display: flex;
+    justify-content: center;
+    background-color: #242424;
+  }
+
+  .footerstyle {
+    text-align: center;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footerTop{
+    padding: 100px;
+  }
+}
+
+  .footer img{
+    width: 40px;
+  }
+
+  .footerH3{
+    font-family: "DIN 2014";
+    font-weight: 500;
+    color: white;
+    font-size: 20px;
+  }
+
+  .footerP{
+    font-family: "DIN 2014";
+    font-weight: 200;
+    color: white;
+    font-size: 15px;
+  }
+
+  #map { height: 500px; }
+
+/*dit is de styling en de plaatsing van de buttons*/
+  .button{
+    background-color: #242424;
+    border: none;
+  }
+
+  .share_button{
+    float: right;
+    padding: 30px;
+    width: 3%;
+  }

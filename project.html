@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Niels Van Der Hulst</title>
+      <meta charset="utf-8">
+      <link href="css\projectStyle.css" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <link rel="manifest" href="manifest.json">
+      <script src="sw.js" defer></script>
+      <script src="js/location.js" type="text/javascript" defer> </script>
+      <script src="js/share.js" type="text/javascript" defer> </script>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta
+        name="keywords"
+        content="HTML,CSS,JavaScript,PWA,App Shell,Manifest,Serviceworker"
+      />
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+         integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+         crossorigin=""/>
+      <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+         integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+         crossorigin=""></script>
+   </head>
+   <body>
+      <div class="hamburger-menu">
+         <input id="menu__toggle" type="checkbox" />
+         <label class="menu__btn" for="menu__toggle">
+         <span></span>
+         </label>
+         <ul class="menu__box">
+            <li><a class="menu__item" href="">Wie ben ik?</a></li>
+            <li><a class="menu__item" href="">Wat kan ik?</a></li>
+            <li><a class="menu__item" href="">Projecten</a></li>
+            <li><a class="menu__item" href="#section4">Contact</a></li>
+         </ul>
+      </div>
+      <div class="div1">
+         <img src="img/bookfinderLogo.png" alt="bookfinder logo">
+      </div>
+      <div class="div2" id="section2">
+         <a id="paginaDelen" href="#">
+         <img width="50" height="50" src="img\share_icon.png" title="Pinterest" />
+         </a>
+         <h1 class="div2H1">Book finder</h1>
+         <p class="div2P">Dit is een opdracht die ik voor school heb gemaakt. De opdracht was dat je onderzoek moet doen naar<br>
+            bibliotheken en daarmee de ervaring van de bibliotheek te moderniseren.<br>
+            <br>
+            Mijn concept: De online bibliotheek word tegenwoordig meer gebruikt dan de fysieke bibliotheken, daarom ga<br>
+            ik deze twee combineren om meer mensen naar de fysieke bibliotheek te brengen. Ik heb een app gedesigned<br>
+            waar je een lijst op krijgt van boeken die je kunt vinden in de bibliotheek, dit zorgt ervoor dat mensen weten<br>
+            wat ze kunnen vinden in de bibliotheek. Als  je een boek hebt gevonden dat je wil lezen dan druk je op de<br>
+            “zoek boek” knop, je krijgt dan een kaart van de bibliotheek met daarop de route naar jou gekozen boek.<br>
+            <br>
+            Voor mensen die geen idee hebben wat ze willen lezen is er de “book tour”, dit maakt dan een lijstje van<br>
+            boeken die jij mogelijk interessant vind gebaseerd op de boeken die je al hebt gelezen. als je tevreden bent<br>
+            met de lijst dan klink je op de zoek knop en maakt de app een route naar al deze boeken.<br>
+         </p>
+      </div>
+      <div class="div3" id="section3">
+         <img src="img\bookfinderimg.png" alt="bookfinder mockup">
+      </div>
+      <div class="div4" id="section4">
+         <div id="myDiv" style=display:none;>
+            <div id="map"></div>
+         </div>
+         <footer>
+            <div class="footer">
+               <div class="footerTop">
+                  <h3 class="footerH3">Contact</h3>
+                  <p class="footerP">Heb je een vraag over mij, mijn werk of iets compleet<br>
+                     anders? Neem dan gerust contact op met mij, ik help<br>
+                     je graag!
+                  </p>
+               </div>
+               <div class="footerstyle">
+                  <h3 class="footerH3">Locatie</h3>
+                  <p class="footerP">Someren</p>
+                  <button class="button" id="button">
+                  <img src="img\location_icon.png" alt="location icon"/>
+                  </button>
+               </div>
+               <div class="footerstyle">
+                  <h3 class="footerH3">E-mail</h3>
+                  <p class="footerP">n.vanderhulst27@gmail.com</p>
+               </div>
+               <div class="footerstyle">
+                  <h3 class="footerH3">Instagram</h3>
+                  <p class="footerP">nielsvanderhulst</p>
+               </div>
+            </div>
+         </footer>
+      </div>
+   </body>
+</html>

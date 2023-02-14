@@ -1,0 +1,32 @@
+{
+  "name": "Niels van der Hulst PWA",
+  "short_name": "NVDH PWA",
+  "start_url": "/index.html",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#242424",
+  "theme_color": "#FFBB3B",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon/logo48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "/icon/logo96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/icon/logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon/logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

@@ -1,0 +1,532 @@
+body {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  background-color: #FFFFFF;}
+
+
+@media(max-width:800px){
+  /*Ik gebruik deze divs om de pagina in stukken te delen, hier geef ik aan hoe groot deze moeten zijn en waar ze moeten staan*/
+  .div1{
+    position: absolute;
+    height: 1000px;
+    width: 100%;
+    padding: 0px;
+    top: 0;
+    background-color: #242424;
+  }
+
+  .div2{
+    position: absolute;
+    margin-top: 950px;
+    height: 600px;
+    width: 100%;
+    padding: 0px;
+    background-color: #FFFFFF;
+  }
+
+  .div3{
+    position: absolute;
+    margin-top: 1500px;
+    height: 1900px;
+    width: 100%;
+    padding: 0px;
+    background-color: #242424;
+  }
+
+  .div4{
+    position: absolute;
+    margin-top: 3400px;
+    height: 1000px;
+    width: 100%;
+    padding: 0px;
+    background-color: #FFFFFF;
+  }
+
+  .div5{
+    position: absolute;
+    margin-top: 4400px;
+    height: 800px;
+    width: 100%;
+    padding: 0px;
+    background-color: #242424;
+  }
+
+
+/*Hier geef ik de stijl aan van de text die in de verschillende divs staan*/
+  .div1H1 {
+    text-align: center;
+    margin-top: 400px;
+    margin-bottom: 0px;
+    font-family: "Neue Haas Grotesk Display Pro", bold;
+    font-weight: 500;
+    color: white;
+    font-size: 40px;
+  }
+
+  .div1P {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: "DIN 2014";
+    font-weight: 300;
+    color: white;
+    font-size: 25px;
+  }
+
+  .div2H1 {
+    text-align: center;
+    padding: 0;
+    padding-top: 160px;
+    font-family: "DIN 2014";
+    font-weight: 600;
+    color: #000000;
+    font-size: 30px;
+  }
+
+  .div2P {
+    text-align: center;
+    margin-top: 0;
+    padding: 0;
+    font-family: "DIN 2014";
+    font-weight: 300;
+    color: #000000;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .div3H1 {
+    text-align: center;
+    padding: 0;
+    padding-top: 100px;
+    font-family: "DIN 2014";
+    font-weight: 700;
+    color: #FFBB3B;
+    font-size: 20px;
+  }
+
+  .div3H2 {
+    text-align: center;
+    margin-top: 0;
+
+    padding: 0;
+    font-family: "DIN 2014";
+    font-weight: 700;
+    color: #FFFFFF;
+    font-size: 50px;
+  }
+
+  .div4H1 {
+    text-align: center;
+    padding: 0;
+    padding-top: 100px;
+    font-family: "DIN 2014";
+    font-weight: 700;
+    color: #FFBB3B;
+    font-size: 20px;
+  }
+
+  .div4H2 {
+    text-align: center;
+    margin-top: 0;
+    padding: 0;
+    font-family: "DIN 2014";
+    font-weight: 700;
+    color: #242424;
+    font-size: 50px;
+  }
+
+
+  /*Deze grid gebruik ik om de projecten te verdelen over twee kolommen*/
+  .grid {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin-left: 25px;
+
+  }
+
+  .grid img {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /*het hamburger menu is gemaakt met behulp van fullpage, bron:https://alvarotrigo.com/blog/hamburger-menu-css/*/
+  /*het eerste deel is de knop die van een hamburger icoon naar een kruis verrandert wanneer hierop geklikt wordt*/
+  #menu__toggle {
+    opacity: 0;
+  }
+  #menu__toggle:checked + .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    left: 0 !important;
+  }
+  .menu__btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition-duration: .25s;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+
+  /*dit is het hamburger menu hier zit de plaatsing en de transitie "animatie" in, z-index gebruik ik om ervoor te zorgen
+  dat het menu altijd boven andere objecten staat*/
+  .menu__box {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 190px 0;
+    list-style: none;
+    background-color: #FFBB3B;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    transition-duration: .25s;
+    z-index: 1;
+  }
+
+  /*dit is de styling voor de knoppen in het hamburger menu*/
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    padding-top: 30px;
+    color: #242424;
+    font-family: 'DIN 2014';
+    font-size: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+  }
+  .menu__item:hover {
+    background-color: #242424;
+    color: #FFBB3B;
+  }
+
+  /*Hier zet ik 4 afbeeldingen horizontaal naast elkaar, zorg ik ervoor dat deze responsive zijn en voeg ik de stijl toe*/
+  .item{
+    float: center;
+    width:100%;
+    text-align:center;
+    display:block;
+    margin-right: 0px;
+    padding-top: 30px;
+    margin-bottom: 0px;
+    max-width: 100%;
+  }
+  .item h1{
+    font-family: "DIN 2014";
+    font-weight: 500;
+    color: white;
+    font-size: 30px;
+  }
+
+  .item p{
+    font-family: "DIN 2014";
+    font-weight: 200;
+    color: white;
+    font-size: 20px;
+  }
+
+  /*dit is de styling en de plaatsing van de footer*/
+  .footer{
+    background-color: #242424;
+  }
+
+  .footerstyle {
+    padding: 30px;
+  }
+
+  .footerTop{
+    padding: 30px;
+  }
+
+}
+
+/*hier geef ik aan wat er moet gebeuren als ik over een menu knop hover */
+.menu__item:hover {
+  background-color: #242424;
+  color: #FFBB3B;
+}
+
+@media(min-width:800px){
+  /*Ik gebruik deze divs om de pagina in stukken te delen, hier geef ik aan hoe groot deze moeten zijn*/
+  .div1{
+    position: absolute;
+    height: 1000px;
+    width: 100%;
+    padding: 0px;
+    top: 0;
+    background-color: #242424;
+  }
+
+  .div2{
+    position: absolute;
+    margin-top: 950px;
+    height: 600px;
+    width: 100%;
+    padding: 0px;
+    background-color: #FFFFFF;
+  }
+
+  .div3{
+    position: absolute;
+    margin-top: 1500px;
+    height: 800px;
+    width: 100%;
+    padding: 0px;
+    background-color: #242424;
+  }
+
+  .div4{
+    position: absolute;
+    margin-top: 2300px;
+    height: 1200px;
+    width: 100%;
+    padding: 0px;
+    background-color: #FFFFFF;
+  }
+
+  .div5{
+    position: absolute;
+    margin-top: 3500px;
+    height: 200px;
+    width: 100%;
+    padding: 0px;
+    background-color: #242424;
+  }
+
+  /*Hier geef ik de stijl aan van de text en afbeeldingen die in de verschillende divs staan*/
+  .div1H1 {
+    text-align: center;
+    margin-top: 400px;
+    margin-bottom: 0px;
+    font-family: "Neue Haas Grotesk Display Pro", bold;
+    font-weight: 500;
+    color: white;
+    font-size: 70px;
+  }
+
+  .div1P {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: "DIN 2014";
+    font-weight: 300;
+    color: white;
+    font-size: 35px;
+  }
+
+  .div2H1 {
+    text-align: center;
+    padding: 0;
+    padding-top: 160px;
+    font-family: "DIN 2014";
+    font-weight: 600;
+    color: #000000;
+    font-size: 40px;
+  }
+
+  .div2P {
+    text-align: center;
+    margin-top: 0;
+    padding: 0;
+    font-family: "DIN 2014";
+    font-weight: 300;
+    color: #000000;
+    font-size: 30px;
+  }
+
+  .div3H1 {
+    text-align: center;
+    padding: 0;
+    padding-top: 100px;
+    font-family: "DIN 2014";
+    font-weight: 700;
+    color: #FFBB3B;
+    font-size: 32px;
+  }
+
+  .div3H2 {
+    text-align: center;
+    margin-top: 0;
+
+    padding: 0;
+    font-family: "DIN 2014";
+    font-weight: 700;
+    color: #FFFFFF;
+    font-size: 70px;
+  }
+
+  .div4H1 {
+    text-align: center;
+    padding: 0;
+    padding-top: 100px;
+    font-family: "DIN 2014";
+    font-weight: 700;
+    color: #FFBB3B;
+    font-size: 32px;
+  }
+
+  .div4H2 {
+    text-align: center;
+    margin-top: 0;
+    padding: 0;
+    font-family: "DIN 2014";
+    font-weight: 700;
+    color: #242424;
+    font-size: 70px;
+  }
+
+  /* hier transformeer ik het hamburgermenu naar een horizontale navbar*/
+  .menu__box {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 45px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #FFBB3B;
+    z-index: 2;
+  }
+  .menu__item {
+    display: flex;
+    padding: 12px 24px;
+    color: black;
+    font-family: 'DIN 2014';
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .hamburger-menu img{
+    float: left;
+  }
+
+  /*Hier zet ik 4 afbeeldingen horizontaal naast elkaar en zorg ik ervoor dat deze responsive zijn*/
+  .item{
+    float: left;
+    width:25%;
+    text-align:center;
+    display:block;
+    margin-right: 0px;
+    padding-top: 30px;
+    margin-bottom: 0px;
+    max-width: 100%;
+  }
+  .item h1{
+    font-family: "DIN 2014";
+    font-weight: 500;
+    color: white;
+    font-size: 30px;
+  }
+
+  .item p{
+    font-family: "DIN 2014";
+    font-weight: 200;
+    color: white;
+    font-size: 20px;
+  }
+
+  /*Deze grid gebruik ik om de projecten te verdelen over vier kolommen*/
+  .grid {
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+  }
+
+  .grid img {
+    max-width: 100%;
+  }
+
+  .grid a{
+    max-width: 90%;
+  }
+
+  /*dit is de styling en de plaatsing van de footer*/
+  .footer{
+    display: flex;
+    justify-content: center;
+    background-color: #242424;
+  }
+
+  .footerstyle {
+    text-align: center;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footerTop{
+    padding: 100px;
+  }
+}
+
+  .footer img{
+    width: 40px;
+  }
+
+  .footerH3{
+    font-family: "DIN 2014";
+    font-weight: 500;
+    color: white;
+    font-size: 20px;
+  }
+
+  .footerP{
+    font-family: "DIN 2014";
+    font-weight: 200;
+    color: white;
+    font-size: 15px;
+  }
+
+#map { height: 500px; }
+
+.button{
+  background-color: #242424;
+  border: none;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Niels Van Der Hulst</title>
+      <meta charset="utf-8">
+      <link href="css/style.css" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <link rel="manifest" href="manifest.json">
+      <script src="sw.js" defer></script>
+      <script src="js/location.js" type="text/javascript" defer> </script>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta
+        name="keywords"
+        content="HTML,CSS,JavaScript,PWA,App Shell,Manifest,Serviceworker"
+      />
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+         integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+         crossorigin=""/>
+      <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+         integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+         crossorigin=""></script>
+   </head>
+   <body>
+      <div class="hamburger-menu">
+         <input id="menu__toggle" type="checkbox" />
+         <label class="menu__btn" for="menu__toggle">
+         <span></span>
+         </label>
+         <ul class="menu__box">
+            <li><a class="menu__item" href="#section2">Wie ben ik?</a></li>
+            <li><a class="menu__item" href="#section3">Wat kan ik?</a></li>
+            <li><a class="menu__item" href="#section4">Projecten</a></li>
+            <li><a class="menu__item" href="#section5">Contact</a></li>
+         </ul>
+      </div>
+      <div class="div1">
+         <h1 class="div1H1">Niels Van Der Hulst</h1>
+         <p class="div1P">Welkom op mijn portfolio!</p>
+      </div>
+      <div class="div2" id="section2">
+         <h1 class="div2H1">Hi, ik ben Niels!</h1>
+         <p class="div2P">Ik ben 22 jaar oud en ik studeer momenteel Communicatie en multimedia<br>
+            design op Avans Hogeschool in Den Bosch. Ik ben geïnteresseerd in<br>
+            concept design en UI/UX design.
+         </p>
+      </div>
+      <div class="div3" id="section3">
+         <h1 class="div3H1">WERKZAAMHEDEN</h1>
+         <h2 class="div3H2">Wat kan ik? </h2>
+         <div class="item">
+            <img src="img\screen_icon.png" alt="screen icon"/>
+            <h1>UI/UX design</h1>
+            <p>Interactieve layouts designen voor<br>apps en website’s</p>
+         </div>
+         <div class="item">
+            <img src="img\brush_icon.png" alt="brush icon"/>
+            <h1>Grafisch design</h1>
+            <p>Illustrator, Photoshop, Adobe XD</p>
+         </div>
+         <div class="item">
+            <img src="img\paper_icon.png" alt="paper icon"/>
+            <h1>Concept design</h1>
+            <p>Toffe concepten bedenken en<br>duidelijk presenteren</p>
+         </div>
+         <div class="item">
+            <img src="img\text_icon.png" alt="text icon"/>
+            <h1>Web development</h1>
+            <p>HTML en CSS</p>
+         </div>
+      </div>
+      <div class="div4" id="section4">
+         <h1 class="div4H1">PORTFOLIO</h1>
+         <h2 class="div4H2">Recente projecten</h2>
+         <div class="grid">
+            <a href="project.html"><img src="img\bookfinder.png"></a>
+            <a href="project.html"><img src="img\checklist.png"></a>
+            <a href="project.html"><img src="img\gyrotaxi.png"></a>
+            <a href="project.html"><img src="img\thenext.png"></a>
+            <a href="project.html"><img src="img\underconstruction.png"></a>
+            <a href="project.html"><img src="img\underconstruction.png"></a>
+            <a href="project.html"><img src="img\underconstruction.png"></a>
+            <a href="project.html"><img src="img\underconstruction.png"></a>
+         </div>
+      </div>
+      <div class="div5" id="section5">
+         <div id="myDiv" style=display:none;>
+            <div id="map"></div>
+         </div>
+         <footer>
+            <div class="footer">
+               <div class="footerTop">
+                  <h3 class="footerH3">Contact</h3>
+                  <p class="footerP">Heb je een vraag over mij, mijn werk of iets compleet<br>
+                     anders? Neem dan gerust contact op met mij, ik help<br>
+                     je graag!
+                  </p>
+               </div>
+               <div class="footerstyle">
+                  <h3 class="footerH3">Locatie</h3>
+                  <p class="footerP">Someren</p>
+                  <button class="button" id="button">
+                  <img src="img\location_icon.png" alt="location icon"/>
+                  </button>
+               </div>
+               <div class="footerstyle">
+                  <h3 class="footerH3">E-mail</h3>
+                  <p class="footerP">n.vanderhulst27@gmail.com</p>
+               </div>
+               <div class="footerstyle">
+                  <h3 class="footerH3">Instagram</h3>
+                  <p class="footerP">nielsvanderhulst</p>
+               </div>
+            </div>
+         </footer>
+      </div>
+   </body>
+</html>
